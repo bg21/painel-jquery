@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html, body{
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+h1, h2, h3, h4, a, p{
+    color: #fff;
+}
+div.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+div.flex{
+    display: flex;
+    width: 100%;
+}
+
+div.flex div.sidebar{
+    background-color: #1a1a1a;
+    width: 300px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: fixed;
+}
+div.flex div.sidebar span{
+    background-color: #c7a424;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.flex div.sidebar div.item label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141414;
+    cursor: pointer;
+    padding: 15px;
+    color: #d7e1e5;
+    font-size: 15px;
+}
+div.flex div.sidebar div.item label:hover{
+    background-color: #262626;
+}
+div.flex div.sidebar div.item ul{
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.4s linear;
+}
+div.flex div.sidebar div.item ul li a{
+    font-weight: lighter;
+    display: block;
+    padding: 10px 20px;
+    color: #d7e1e5;
+    font-size: 15px;
+    border-bottom: 1px solid #333;
+}
+div.flex div.sidebar div.item ul li a i{
+    font-size: 16px;
+    padding-right: 10px;
+}
+div.flex div.sidebar div.item ul li:hover{
+    background-color: #363636;
+}
+div.flex div.sidebar div.item input[type=checkbox]{
+    display: none;
+}
+div.flex div.sidebar div.item input:checked ~ ul{
+    height: auto;
+    max-height: 200px;
+    transform: all;
+}
+div.flex div.corpo{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    background-color: #262626;
+}
+div.flex div.corpo div.head-painel{
+    background-color: #141414;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    border-top: 1px solid #333;
+}
+div.flex div.corpo div.body-painel{
+    padding: 20px;
+}
+div.flex div.corpo div.body-painel p{
+    padding: 10px 0;
+}
+i{
+    color: #fff;
+    cursor: pointer;
+    font-size: 26px;
+}
+@media screen and (max-width: 860px){
+    div.flex div.corpo{
+        width: 100%;
+        margin-left: 0;
+    }
+}
